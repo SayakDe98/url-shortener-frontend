@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function ResultCard({ result }: Props) {
-  const shortUrl = `http://localhost:3000/${result.short_code}`;
+  const shortUrl = import.meta.env.API_URL + `/${result.short_code}`;
 
   const copy = () => {
     navigator.clipboard.writeText(shortUrl);
