@@ -17,7 +17,7 @@ export default function ShortenerForm({ setResult }: Props) {
 
     try {
       const res = await axios.post<ShortenResponse>(
-        import.meta.env.API_URL + "/shorten",
+        import.meta.env.VITE_API_URL + "/shorten",
         { url, expiry_minutes: 1440 }
       );
 
