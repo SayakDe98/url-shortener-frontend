@@ -11,7 +11,7 @@ export default function StatsCard({ code }: Props) {
 
   useEffect(() => {
     axios
-      .get<StatsResponse>(`${import.meta.env.VITE_API_URL}/stats/${code}`)
+      .get<StatsResponse>(`/api/stats/${code}`)
       .then((res) => setClicks(res.data.clicks))
       .catch(() => console.error("Failed to fetch stats"));
   }, [code]);

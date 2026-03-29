@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function ResultCard({ result }: Props) {
-  const shortUrl = import.meta.env.VITE_API_URL + `/${result.short_code}`;
+  const shortUrl = `/api/${result.short_code}`;
 
   const copy = () => {
     navigator.clipboard.writeText(shortUrl);
