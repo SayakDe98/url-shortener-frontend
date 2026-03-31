@@ -5,6 +5,7 @@ interface Props {
 }
 
 export default function ResultCard({ result }: Props) {
+  console.log(result);
   const shortUrl = `${result.short_code?.replace('/api/', 'http://ec2-13-235-115-69.ap-south-1.compute.amazonaws.com:3000/')}`;
 
   const copy = () => {
