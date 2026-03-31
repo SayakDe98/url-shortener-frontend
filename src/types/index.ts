@@ -5,6 +5,7 @@ interface ExpiresAt {
 
 export interface ShortenResponse {
   short_code: string;
+  short_url: string;
   expires_at: ExpiresAt;
 }
 
