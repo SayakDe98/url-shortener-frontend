@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function ResultCard({ result }: Props) {
-  const shortUrl = `${result.short_url}`;
+  const shortUrl = `${result.short_url}`; //short url
 
   const copy = () => {
     navigator.clipboard.writeText(shortUrl);
